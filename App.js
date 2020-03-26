@@ -1,19 +1,15 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 import Login from './src/components/login-form';
-import Provider from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
-import Reducers from './src/reducers';
-
-import thunk from 'redux-thunk';
+import {Provider} from 'react-redux';
+import Store from './src/reducers';
 
 // import rootReducer from './reducers/index';
 
-const store = createStore(Reducers);
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
+      <Provider store={Store}>
         <View style={styles.container}>
           <Login />
         </View>

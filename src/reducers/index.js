@@ -1,9 +1,10 @@
-import {combineReducers} from 'redux';
+import { combineReducers, createStore } from 'redux';
 
 import AuthenticationReducer from './AuthenticationReducer';
 
 const RootReducers = combineReducers({
-  auth: AuthenticationReducer,
+    auth: AuthenticationReducer,
 });
 
-export default RootReducers;
+const Store = createStore(RootReducers)
+export default Store

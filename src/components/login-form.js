@@ -36,6 +36,7 @@ import {connect} from 'react-redux';
 
 class Login extends Component {
   render() {
+    console.warn(this.props.email)
     return (
       <Container style={styles.container}>
         <Header style={styles.header}>
@@ -90,6 +91,7 @@ export default connect(
   {authInputChange},
 )(Login);
 
+// export default Login
 const styles = StyleSheet.create({
   container: {
     flex: 1,
